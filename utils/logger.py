@@ -66,9 +66,7 @@ class Logger(logging.Logger):
         super().__init__("afkbot")
 
     bot_logger = logging.getLogger("afkbot")
-    bot_logger.setLevel(
-        logging.DEBUG
-    )  # Set the bot_logger level to debug for testing
+    bot_logger.setLevel(logging.DEBUG)  # Set the bot_logger level to debug for testing
 
     if not bot_logger.handlers:  # prevent duplicate messages
         file_handler = logging.FileHandler(
